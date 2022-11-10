@@ -1,0 +1,578 @@
+:root {
+    --color-bg: #191A1F;
+    --color-main: #D22F27;
+    --color-secondary: #474850;
+    --color-text: #696972;
+  
+    --font-main: "Thiccboi"
+}
+
+@font-face {
+    font-family: "Thiccboi";
+    src: url('../font/THICCCBOI-Black.ttf') format("truetype");
+    font-weight: 900;
+}
+@font-face {
+    font-family: "Thiccboi";
+    src: url('../font/THICCCBOI-SemiBold.ttf') format("truetype");
+    font-weight: bold;
+}
+@font-face {
+    font-family: "Thiccboi";
+    src: url('../font/THICCCBOI-Regular.ttf') format("truetype");
+    font-weight: normal;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--font-main);
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    color: var(--color-text);
+    outline: none;
+}
+body {
+    overflow-x: hidden;
+    background: var(--color-bg);
+}
+a {
+    text-decoration: none;
+    cursor: pointer;
+}
+button {
+    cursor: pointer;    
+}
+ul,
+ol {
+    list-style: none;
+}
+h1,
+h2,
+h3 {
+    font-family: var(--font-main);
+}
+input {
+    outline: none;
+}
+.App {
+    width: 100%;
+}
+
+.burger{
+    display: none;
+}
+.sidebar-icon{
+    width: 25px;
+    height: 25px;
+}
+.layout{
+    display: flex;
+}
+.sidebar{
+    width: 20%;
+    height: 100vh;
+}
+.layout-main{
+    margin-left: 20%;
+    width: 80%;
+}
+.main-content{
+    width: 100%;
+    display: flex;
+}
+
+.img-wrapper img{
+    border-radius: inherit;
+    width: 100%;
+}
+.subheading{
+    color: white;
+    margin-bottom: 25px;
+}
+.trending-container, .list-container, .profile-container{
+    padding: 5%;
+}
+
+/* Sidebar */
+
+.burger{
+    display: none;
+    width: 40px;
+    height: 40px;
+    margin: 25px 0 0 25px;
+}
+
+.sidebar{
+    width: 20%;
+    padding: 3%;
+    position: fixed;
+    height: 100vh;
+    float: left;
+    border-right: 1px solid var(--color-text);
+    background: var(--color-bg);
+}
+.sidebar-link{
+    display: flex;
+    align-items: center;
+}
+.sidebar-link *{
+    color: var(--color-main);
+}
+.sidebar-link svg{
+    margin-right: 10px;
+    color: var(--color-main);
+}
+.sidebar .sidebar-links{
+    margin-top: 15%;
+    display: flex;
+    flex-flow: column;
+
+}
+.sidebar .sidebar-links a{
+    margin: 15px 0;
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+.sidebar .sidebar-links button{
+    border: none;
+    background: transparent;
+    font-size: 1.25rem;
+    font-weight: bold;
+    margin-top: 15px;
+    text-align: start;
+}
+.sidebar .sidebar-links a li:hover, .sidebar .sidebar-links button:hover{
+    color: white;
+}
+.sidebar-icon{
+    width: 25px;
+    height: 25px;
+}
+/* Banner */
+
+.home{
+    width: 75%;
+    padding: 5%;
+    display: flex;
+    flex-flow: column;
+    align-items: flex-start;
+}
+.home .banner{
+    width: 100%;
+    margin: 0 auto 5% auto;
+}
+.banner-img{
+    width: 100%;
+    position: relative;
+    border-radius: 25px;
+}
+.banner-content{
+    position: absolute;
+    bottom: 5%;
+    left: 5%;
+}
+.banner-content h2{
+    font-size: 3rem;
+    color: white;
+    margin-bottom: 10px;
+}
+.banner-img img{
+    border-radius: 25px;
+    filter: brightness(65%);
+    width: 100%;
+}
+.banner-content .btn-container{
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.banner-content button{
+    width: 60%;
+    background: var(--color-main);
+    color: white;
+    font-weight: bold;
+    font-size: 1.5rem;
+    border: none;
+    padding: 5% 0;
+    border-radius: 15px;
+}
+.banner-content .btn-add{
+    width: 50px;
+    margin-left: 5%;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+/* Movies */
+
+.movie-row{
+    margin-top: 2.5%;
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    align-items: center;
+    overflow-x: scroll;
+    justify-content: space-between;
+}
+.trending-row .movie-row{
+    justify-content: start;
+}
+.trending-row .movie-row .movie{
+    margin: 25px;
+    width: calc(25% - 50px);
+}
+::-webkit-scrollbar{
+    display: none;
+}
+.movie{
+    background-size: cover;
+    background-position: center;
+    width: 20%;
+    position: relative;
+    height: 250px;
+    border-radius: 25px;
+    display: flex;
+    flex-flow: column;
+    justify-content: space-between;
+    cursor: pointer;
+}
+.movie-2{
+    width: 40%;
+    height: 200px;
+    margin: 5% 0;
+}
+.movie-3{
+    margin-right: 15px;
+    width: 250px;
+    height: 250px;
+}
+.movie h3{
+    align-self: flex-start;
+    color: white;
+    font-size: 1.5rem;
+    margin: 10px;
+}
+.movie button{
+    align-self: flex-end;
+    width: 50px;
+    height: 50px;
+    background: #191a1f9f;
+    border-radius: 50%;
+    margin: 10px;
+    border: none;
+    font-size: 2rem;
+    font-weight: 900;
+    color: white;
+}
+.sidebar-right{
+    padding: 5% 1%; 
+    width: 25%;
+    align-self: flex-start;
+    height: 100vh;
+}
+
+.movie-overlay{
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    display: grid;
+    place-items: center;
+    border-radius: inherit;
+    opacity: 0;
+    transition: all .5s;
+}
+.movie-overlay h2{
+    color: white;
+    text-align: center;
+}
+.movie:hover > .movie-overlay{
+    opacity: 1;
+}
+
+.movie-info h3{
+    font-size: 1.5rem;
+    margin-top: 10px;
+    color: white;
+}
+
+/* My List */
+
+.my-list{
+    display: flex;
+    flex-wrap: wrap;
+}
+.list-container .subheading{
+    padding-left: 25px;
+}
+.my-list .movie{
+    margin: 15px;
+}
+
+/* Movie Page */
+
+.movie-page{
+    height: 70vh;
+    background-size: cover;
+    background-position: top;
+    position: relative;
+}
+.hero-overlay{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: rgb(0,0,0);
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(25,26,31,1) 100%, rgba(8,8,8,1) 100%);
+}
+
+.hero-content{
+    position: absolute;
+    bottom: 5%;
+    left: 5%;
+}
+.hero-content h2{
+    font-size: 3rem;
+    color: white;
+}
+.hero-content p{
+    font-size: 1.5rem;
+    color: #ababab;
+    width: 50%;
+    margin: 10px 0;
+}
+.hero-content .movie-buttons{
+    display: flex;
+    align-items: center;
+
+}
+.hero-content .movie-buttons button, .hero-content .movie-buttons a{
+    width: 20%;
+    padding: 15px 0;
+    color: white;
+    background: rgba(255, 255, 255, 0.25);
+    font-size: 1.5rem;
+    border: none;
+    border-radius: 15px;
+}
+
+.hero-content .movie-buttons a{
+    background: var(--color-main);
+    text-align: center;
+    margin-right: 25px;
+}
+
+.recommended-list{
+    padding: 5%;
+    flex-wrap: wrap;
+    display: flex;
+    align-items: center;
+    justify-content: start
+}
+.recommended-list .movie{
+    width: 20%;
+    margin: 15px;
+}
+
+/* Trending */
+
+.trending-row {
+    width: 90%;
+    margin-bottom: 5%;
+
+}
+.trending-container .banner{
+    width: 90%;
+    padding: 0 25px;
+    margin-right: auto;
+}
+
+/* Profile Page */
+
+.profile-container{
+    display: flex;
+}
+.profile-container .profile-picture{
+    width: 250px;
+    border-radius: 15px;
+}
+.profile-container .profile-settings{
+    width: 80%;
+    margin-left: auto;
+}
+.profile-settings form{
+    display: flex;
+    flex-flow: column;
+    width: 60%;
+    margin: 0 auto 0 5%;
+}
+.profile-settings form h2{
+    color: white;
+    font-size: 2rem;
+    margin-bottom: 25px;
+}
+.profile-settings form input{
+    font-size: 1.5rem;
+    padding: 15px;
+    border: none;
+    background: var(--color-secondary);
+    color: white;
+    border-radius: 10px;
+    margin: 15px 0;
+}
+.profile-settings form input[type="submit"]{
+    background: var(--color-main);
+    cursor: pointer;
+    margin-bottom: 15%;
+}
+
+/* Login & Registration */
+
+.login-page{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+.login-hero{
+    width: 75%;
+    height: 100%;
+    background-image: url('../img/hero-cinema.jpg');
+    background-position: center;
+    background-size: cover;
+}
+.login-form{
+    width: 25%;
+    padding: 1%;
+}
+.login-form h1{
+    font-size: 3rem;
+    color: white;    
+    margin-bottom: 25px;
+}
+.login-form form{
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    margin: 0 auto;
+    width: 100%;
+}
+.login-form form input{
+    width: 100%;
+    font-size: 1.5rem;
+    padding: 10px;
+    color: white;
+    margin: 10px 0;
+    outline: none;
+    border: none;
+    background: var(--color-secondary);
+    border-radius: 15px;
+}
+.login-form form input[type="submit"]{
+    background: var(--color-main);
+    cursor: pointer;
+}
+
+.login-form .login-link{
+    text-decoration: underline;
+    color: var(--color-text);
+    font-size: 1.25rem;
+    text-align: end;
+}
+
+/* Loader */
+
+.loading{
+    position: absolute;
+    width: 80vw;
+    height: 100vh;
+    background: var(--color-bg);
+    display: grid;
+    place-items: center;
+    text-align: center;
+    font-size: 10rem;
+    z-index: 99;
+}
+.loading .spinner{
+    width: 150px;
+    height: 150px;
+    background: transparent;
+    border: 15px solid var(--color-main);
+    border-top-color: var(--color-bg);
+    border-bottom-color: var(--color-bg);
+    border-radius: 50%;
+    animation: 1.5s spin infinite;
+    transition: all .5s;
+}
+
+@keyframes spin {
+    0% {
+       transform: rotate(0deg); 
+    }
+
+    25% {
+        transform: rotate(90deg); 
+    }
+    
+    50% {
+        transform: rotate(180deg); 
+    }
+
+    75%{
+        transform: rotate(270deg); 
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+
+}
+
+/* Searchbar */
+
+.searchbar{
+    display: flex;
+    width: 35%;
+    align-items: center;
+    margin-left: auto;
+    justify-content: flex-end;
+    border: 2px solid var(--color-secondary);
+    margin-bottom: 2.5%;
+    border-radius: 50px;
+}
+.searchbar input{
+    padding: 10px 20px;
+    font-size: 1.25rem;
+    outline: none;
+    border: none;
+    width: 100%;
+    background: transparent;
+    color: var(--color-text); 
+    margin-right: 15px;
+}
+.searchbar button{
+    width: 50px;
+    padding: 10px;
+    background: transparent;
+    border: none;
+    margin: 5px;
+    border-radius: 50%;
+}
+
+.search-container{
+    width: 90%;
+    padding: 5%;
+}
+.search-container .search-list{
+    display: flex;
+    flex-wrap: wrap;
+}
+.search-container .search-list .movie{
+    width: calc(20% - 50px);
+    margin: 25px;
+}
+

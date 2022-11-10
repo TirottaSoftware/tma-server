@@ -1,0 +1,277 @@
+@media only screen and (max-width: 1599px){
+    /* Home Page */
+    .sidebar-right .movie{
+        width: 60%;
+    }
+    /* Trending */
+    /* My List */
+    /* Movie Page */
+    /* Profile Page */
+    .search-container .search-list .movie {
+        width: calc(25% - 50px);
+    }
+
+    .login-hero{
+        width: 70%;
+    }
+    .login-form{
+        width: 30%;
+    }
+}
+
+@media only screen and (max-width: 1366px){
+    /* Home Page */
+  
+    .movie-info h3{
+        font-size: 1.25rem;
+        width: 60%;
+    }
+    .home .movie-row .movie{
+        width: calc(45%);
+        margin: 25px 0;
+    }
+    .hero-content p{
+        width: 75%;
+    }
+    .hero-content .movie-buttons button, .hero-content .movie-buttons a{
+        width: 30%;
+    }
+    .search-container .search-list .movie {
+        width: calc(33% - 50px);
+    }
+
+    .login-hero{
+        width: 65%;
+    }
+    .login-form{
+        width: 35%;
+    }
+}
+
+@media only screen and (max-width: 1200px){
+   
+    .logo img{
+        width: 100px;
+    }
+    /* Home Page */
+    .main-content{
+        flex-flow: column;
+    }
+    .home, .sidebar-right{
+        width: 100%;
+        margin: auto;
+    }
+    .sidebar-right{
+        padding: 5%;
+    }
+    .sidebar-right .movie{
+        width: 100%;
+    }
+    /* Trending */
+    .trending-row .movie-row .movie, .recommended-list .movie {
+        width: calc(33% - 50px);
+    }
+    /* My List */
+    .my-list .movie{
+        width: calc(33% - 30px);
+    }
+    /* Movie Page */
+    /* Profile Page */
+    .profile-container {
+        flex-flow: column;
+        align-items: center;
+    }
+    .profile-container .profile-settings {
+        width: 100%;
+        margin-top: 5%;
+    }
+    .profile-settings form{
+        margin: 0 auto;
+    }
+    
+    .login-hero{
+        width: 50%;
+    }
+    .login-form{
+        width: 50%;
+        padding: 2%;
+    }
+}
+
+@media only screen and (max-width: 991px){
+    /* Home Page */
+    .layout-main{
+        margin: 0;
+        width: 100%;
+    }
+
+    /* Burger menu - shown */
+
+    .burger-icon *{
+        color: white;
+    }
+    .burger{
+        background-color: #D22F27;
+        border-radius: 10px;
+        padding: 7.5px;
+        display: block;
+        position: fixed;
+        top: 15px;
+        left: 15px;
+        transition: all .5s;
+        z-index: 20;
+    }
+
+    .sidebar{
+        transition: all .5s;
+        z-index: 10;
+        width: 60%;
+        border: none;
+        top: 0;
+        padding-top: 15%;
+    }
+    .sidebar .logo img{
+        width: 150px;
+        margin-top: 50px;
+    }
+    .sidebar-hidden{
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    .searchbar{
+        width: 45%;
+    }
+    .home{
+        width: 100%;
+        margin: 0;
+    }
+    .sidebar-right {
+        width: 90%;
+        margin: 5% auto;
+        position: relative;
+        float: none;
+        overflow: unset;
+        right: unset;
+        padding: 0;
+        border: none;
+    }
+    /* Trending */
+    .trending-row, .banner, .movie-page, .recommended-list, .list-container, .profile-container{
+        width: 100%;
+    }
+    .trending-container .banner{
+        width: 100%;
+    }
+    /* My List */
+    /* Movie Page */
+    .hero-content p{
+        width: 90%;
+    }
+    .hero-content .movie-buttons button, .hero-content .movie-buttons a{
+        width: 40%;
+    }
+    .recommended-list .movie{
+        width: calc(33% - 30px);
+    }
+    /* Profile Page */
+
+    .search-container .search-list .movie {
+        width: calc(50% - 50px);
+    }
+
+    .login-hero{
+        display: none;
+    }
+    .login-form{
+        width: 90%;
+        padding: 5%;
+        text-align: center;
+        margin: auto;
+    }
+}
+
+@media only screen and (max-width: 678px){
+    .burger{
+        top: 5px;
+    }
+    /* Home Page */
+    .sidebar-right {
+        width: 90%;
+        margin: 5% auto;
+        position: relative;
+        float: none;
+        overflow: unset;
+        right: unset;
+        border: none;
+    }
+    .home{
+        width: 100%;
+    }
+    .banner-content .btn-add{
+        width: 40px;
+    }
+    .sidebar-right .movie-2{
+        height: 90%;
+    }
+    .searchbar{
+        width: 70%;
+        margin: 0 0 5% auto;
+    }
+    .banner-content h2{
+        font-size: 2rem;
+    }
+    .banner-content button{
+        font-size: 1.25rem;
+    }
+    /* Trending */
+   
+    /* My List */
+    /* Movie Page */
+    .recommended-list .movie{
+        width: 40%;
+    }
+    .trending-row .movie-row .movie, .my-list .movie{
+        width: 40%
+    }
+    .hero-content p{
+        font-size: 1.1rem;
+        width: 90%;
+    }
+    .hero-content .movie-buttons{
+        flex-flow: column;
+    }
+    .hero-content .movie-buttons button, .hero-content .movie-buttons a{
+        width: 50%;
+        margin: 1% auto 1% 0;
+        font-size: 1.25rem;
+    }
+    /* Profile Page */
+    .profile-container{
+        flex-flow: column;
+
+        align-items: center;
+    }
+    .profile-container .profile-settings{
+        margin: 5% 0;
+        width: 100%;
+        text-align: center;
+    }
+
+    .trending-row .movie-row .movie{
+        margin: 15px;
+    }
+    .trending-row .movie-row .movie, .my-list .movie{
+        width: 40%;
+    }
+
+    .search-container{
+        width: 100%;
+        margin: auto;
+    }
+     .search-container .search-list .movie {
+        width: calc(50% - 30px);
+    }
+    .search-container .search-list .movie{
+        margin: 15px;
+    }
+}
